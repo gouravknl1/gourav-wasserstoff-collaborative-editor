@@ -1,54 +1,54 @@
-# React + TypeScript + Vite
+                        Explanation of the project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 📝 Collaborative Text Editor
 
-Currently, two official plugins are available:
+A real-time collaborative text editor built using **React**, **TipTap**, **Yjs**, and **WebRTC**. This application allows multiple users to edit a shared document simultaneously across browser tabs or different devices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
 
-## Expanding the ESLint configuration
+👉 [View the live app here](https://your-live-link.vercel.app)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+> Open it in two different tabs or browsers to test real-time collaboration.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+---
+
+## ✨ Features
+
+- Real-time collaboration between users
+- Multiple sessions (browser tabs) editing the same content
+- User distinction with names and colors
+- Peer-to-peer data sync using WebRTC
+- Built with modern tools (React + Vite + TypeScript + TipTap)
+
+---
+
+## 🛠️ Tech Stack
+
+- **React** – UI framework
+- **Vite** – Build tool
+- **TipTap** – Rich text editor
+- **Yjs** – CRDT for shared document state
+- **y-webrtc** – Peer-to-peer synchronization layer
+
+---
+
+                       How to Run the Project Locally
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+cd YOUR_REPO_NAME
+
+ ------- Install dependencies----------
+ npm install
+
+ ------- Start the development server------------
+ npm run dev
+
+ -------- Open in your browser-------------
+http://localhost:5173
+
+
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+# gourav-wasserstoff-collaborative-editor
