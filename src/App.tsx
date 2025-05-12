@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Editor from "./components/Editor";
 
+// Generate a random color for user identification
 const getRandomColor = () =>
   `hsl(${Math.floor(Math.random() * 360)}, 70%, 70%)`;
 

@@ -5,7 +5,7 @@ import Collaboration from "@tiptap/extension-collaboration";
 import CollaborationCursor from "@tiptap/extension-collaboration-cursor";
 import * as Y from "yjs";
 
-// Use Yjs' publicly available WebSocket server
+// Create a shared Yjs document for collaborative state
 const ydoc = new Y.Doc();
 const provider = new WebrtcProvider("my-room-id", ydoc, {
   signaling: ["wss://y-webrtc-eu.fly.dev"], // Public WebSocket server URL
@@ -15,10 +15,10 @@ const Editor = ({ user }: { user: { name: string; color: string } }) => {
   const editor = useEditor({
     extensions: [
       StarterKit,
-      Collaboration.configure({ document: ydoc }),
+      Collaboration.configure({ document: ydoc }), //Enables real-time collaboration
       CollaborationCursor.configure({
         provider,
-        user,
+        user, // Current user's name and color for cursor display
       }),
     ],
     editorProps: {
