@@ -9,7 +9,7 @@ function App() {
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gray-100 p-6">
+    <div className="min-h-screen bg-blue-100 p-6 ">
       {!submitted ? (
         <form
           onSubmit={(e) => {
