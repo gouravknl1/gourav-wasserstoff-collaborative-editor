@@ -9,42 +9,18 @@ function App() {
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <div
-      style={{
-        minHeight: "100vh",
-        backgroundColor: "#f3f4f6", // Tailwind gray-100
-        padding: "1.5rem",
-      }}
-    >
+    <div className="min-h-screen bg-gray-100 p-6">
       {!submitted ? (
         <form
           onSubmit={(e) => {
             e.preventDefault();
             setSubmitted(true);
           }}
-          style={{
-            maxWidth: "28rem", // Tailwind max-w-md
-            margin: "0 auto",
-            display: "flex",
-            flexDirection: "column",
-            gap: "1rem",
-          }}
+          className="max-w-md mx-auto flex flex-col gap-4"
         >
-          <h1
-            style={{
-              fontSize: "1.25rem", // text-xl
-              fontWeight: 600,
-              textAlign: "center",
-            }}
-          >
-            Enter your name
-          </h1>
+          <h1 className="text-xl font-semibold text-center">Enter your name</h1>
           <input
-            style={{
-              padding: "0.5rem",
-              border: "1px solid #d1d5db", // Tailwind border
-              borderRadius: "0.375rem", // rounded
-            }}
+            className="p-2 border border-gray-300 rounded"
             placeholder="e.g., Alice"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
@@ -52,20 +28,7 @@ function App() {
           />
           <button
             type="submit"
-            style={{
-              backgroundColor: "#3b82f6", // Tailwind blue-500
-              color: "white",
-              padding: "0.5rem 0",
-              borderRadius: "0.375rem",
-              cursor: "pointer",
-              transition: "background-color 0.2s",
-            }}
-            onMouseOver={
-              (e) => (e.currentTarget.style.backgroundColor = "#2563eb") // blue-600 on hover
-            }
-            onMouseOut={(e) =>
-              (e.currentTarget.style.backgroundColor = "#3b82f6")
-            }
+            className="bg-blue-500 hover:bg-blue-600 text-white py-2 rounded transition-colors"
           >
             Start Editing
           </button>
