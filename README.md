@@ -6,7 +6,7 @@ A real-time collaborative text editor built using **React**, **TipTap**, **Yjs**
 
 ## 🚀 Live Demo
 
-👉 [View the live app here](https://your-live-link.vercel.app)
+👉 [View the live app here](https://gourav-wasserstoff-collaborative-editor.vercel.app/)
 
 > Open it in two different tabs or browsers to test real-time collaboration.
 
@@ -51,4 +51,5 @@ http://localhost:5173
 
 
 ```
+
 # gourav-wasserstoff-collaborative-editor
